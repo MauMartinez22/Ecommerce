@@ -1,0 +1,112 @@
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.categories-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.products-container{
+    margin-top: 10px;
+}
+
+.form{
+    background-color: #EDE6DB;
+    width: 35rem;
+    height: 2.5rem;
+    border: 0;
+    padding-left: 2rem;
+    border-radius: 5px 0 0 5px; 
+    font-weight: 500;
+}
+
+
+
+button.search-btn{
+    background-color: #00000000;
+    border: 4px solid #EDE6DB;
+    padding: 0 1rem;
+    border-radius: 5px;
+}
+
+button.search-btn:hover{
+    background-color: #EDE6DB;
+ 
+}
+
+.product-wrapper{
+    border-radius: 15px;
+    border: 4px solid #2C73D2;
+    padding: 20px 10px;
+    width: 90%;
+    margin: 20px auto;
+}
+.product-image{
+    align-items: center;
+    border-bottom: 1px solid #0089BA;
+    display: flex;
+    height: 250px;
+    justify-content:center;
+    position: relative;
+}
+
+.product-image img{
+    display: block;
+    height: 80%;
+    margin: 0 auto;
+    object-fit: contain;
+    width: 80%;
+}
+
+
+
+@media (min-width: 700px) { 
+
+    .cards-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        list-style: none;
+    }
+
+    
+    .products-container{
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    .product-wrapper{
+        width: 40%;
+    }
+   
+ }
+ 
+
+.banner{
+    background-image:linear-gradient(#1A3C40, #00000000) ,url('https://images.pexels.com/photos/6416/apple-desk-office-technology.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    height: 50rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    backdrop-filter: blur(10px);
+}
+
+
+.banner-text{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
