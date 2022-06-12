@@ -59,9 +59,9 @@ const ProductDetails = () => {
             <Carousel style={{maxWidth:'500px'}} className='mx-auto'>
                 <Carousel.Item >
                     <img
-                        style={{minWidth: "200px",
-                            maxWidth: "274px",
-                            height:"350px"}}
+                        style={{minWidth: "auto",
+                        maxWidth: "900px",
+                        height:"400px"}}
                         className="d-block w-100"
                         src={product?.productImgs[0]}
                         alt="First slide"
@@ -70,9 +70,9 @@ const ProductDetails = () => {
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                        style={{minWidth: "200px",
-                        maxWidth: "274px",
-                        height:"350px"}}
+                        style={{minWidth: "auto",
+                        maxWidth: "900px",
+                        height:"400px"}}
                         className="d-block w-100"
                         src={product?.productImgs[1]}
                         alt="Second slide"
@@ -82,9 +82,9 @@ const ProductDetails = () => {
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                        style={{minWidth: "200px",
-                        maxWidth: "300px",
-                        height:"350px"}}
+                        style={{minWidth: "auto",
+                        maxWidth: "900px",
+                        height:"400px"}}
                         className="d-block w-100"
                         src={product?.productImgs[2]}
                         alt="Third slide"
@@ -104,14 +104,14 @@ const ProductDetails = () => {
                     <div className='options-subdata-2'>
                         <p><b>Quantity</b></p>
                         <div className='input-container'>
-                            <button onClick={sumCart}>+</button>
+                            <button className='amount-btn' onClick={sumCart}>+</button>
                                 <input type="text" onChange={e=>setCart(e.target.value)} value={cart}/>
-                            <button onClick={resCart}>-</button>
+                            <button className='amount-btn' onClick={resCart}>-</button>
                         </div>
                     </div>
                 </div>
 
-                <button className='btn btn-primary' style={{width: "100%"}} onClick={addCart}>Add Product</button>
+                <button className='buy-button' style={{width: "100%"}} onClick={addCart}>Add Product</button>
 
             </div>
 

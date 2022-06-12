@@ -2,11 +2,16 @@
     margin-top: 50px;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 10rem;
+    align-items: center;
 }
 
 .cards-container {
     list-style: none;
+}
+
+.amount-btn{
+    background-color: aqua;
 }
 
 .product-data {
@@ -64,21 +69,38 @@
 }
 
 .product-options h2 {
-    font-size: 1.2rem;
+    font-size: 1.7rem;
+    
 }
 
 .product-options p {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
+    color: #6c6c6c;
+    font-weight: 400;
 }
 
+.buy-button{
+    background-color: #1A3C40;
+    border-radius: 5px;
+    font-weight: 300;
+    font-size: 1.2rem;
+    border: 0;
+}
+.buy-button:hover{
+    background-color: #102629;
+    border-radius: 5px;
+    font-weight: 300;
+    font-size: 1.2rem;
+}
 
 .product-options div button {
+    text-align: center;
     cursor: pointer;
-    background-color: transparent;
-    border: 1px solid rgb(197, 197, 197);
+    background-color: #233f42;
+    border: 1px solid #c5c5c5;
     border-radius: 2px;
-    height: 30px;
-    width: 25px;
+    height: max-content;
+    width: fit-content;
 }
 
 .options-subdata-1 p span{
@@ -99,10 +121,14 @@
 }
 
 .input-container input {
-    width: 50px;
+    width: max-content;
     border: 1px solid lightgray;
-    height: 30px;
+    height: auto;
     text-align: center;
+}
+
+.input-container  {
+   display: flex;
 }
 
 

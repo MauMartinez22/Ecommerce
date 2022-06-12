@@ -5,14 +5,15 @@ const ProductCard = ({product}) => {
     const navigate=useNavigate();
     
     return (
-        <div className='product-container' onClick={()=>navigate(`/product/${product.id}`)}>
+        <div className='product-container'>
             <div className='product-image'>
                 <img src={product?.productImgs[0]} alt="" />
             </div>
             <div>
                 <h2>{product?.title}</h2>
                 <p>{product?.price}</p>
-                <button className='btn btn-primary'>add</button>
+                <button className='btn-buy'>add</button>
+                <button className='btn-details' onClick={()=>navigate(`/product/${product.id}`)} >Details</button>
             </div>   
         </div>
     );

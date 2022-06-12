@@ -39,21 +39,88 @@ button.search-btn:hover{
  
 }
 
+.filter-section{
+    margin: 3rem 0;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.option:hover{
+    cursor: pointer;
+    color: #3d659c;
+    font-size: 1.07rem;
+    font-weight: 700;
+    
+}
+
 .product-wrapper{
     border-radius: 15px;
-    border: 4px solid #2C73D2;
     padding: 20px 10px;
     width: 90%;
     margin: 20px auto;
+    box-shadow: #110c2e26 0px 48px 100px 0px;
+    margin-bottom: 2rem;
+    background-color: #00000000;
+    border-radius: 5px;
+    
 }
+.product-wrapper:hover{
+    box-shadow: #00000049 0px 18px 50px -10px;
+    
+    
+}
+
 .product-image{
     align-items: center;
-    border-bottom: 1px solid #0089BA;
     display: flex;
-    height: 250px;
-    justify-content:center;
+    height: 300px;
+    min-width: 300px;
+    justify-content: center;
     position: relative;
 }
+
+.product-info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+
+.btn-details{
+    background-color: #417D7A;
+    color: #fff;
+    padding: 0.8rem;
+    border: 0;
+    border-radius: 5px;
+    margin-left: 1.5rem;
+    font-weight: 300;
+}
+
+.btn-details:hover{
+    
+}
+
+.btn-buy{
+    color: #fff;
+    padding: 0.8rem;
+    border:0;
+    border-radius: 5px;
+    background-color: #0c671e;
+    font-weight: 300;
+}
+
+.btn-buy:hover{
+
+}
+
+
+.product-container{
+    display: flex;
+}
+
 
 .product-image img{
     display: block;
@@ -87,8 +154,8 @@ button.search-btn:hover{
         width: 40%;
     }
    
- }
- 
+}
+
 
 .banner{
     background-image:linear-gradient(#1A3C40, #00000000) ,url('https://images.pexels.com/photos/6416/apple-desk-office-technology.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');

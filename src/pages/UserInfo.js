@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import userImage from '../assests/images/user-image.png'
+import axios from 'axios';
+
 
 
 const UserInfo = () => {
-    
     const navigate = useNavigate();
+
 
     const logout = () => {
         localStorage.setItem("token", "");
@@ -22,6 +24,7 @@ const UserInfo = () => {
                     </div>
                     <div>
                         <b>{localStorage.getItem("userName")}</b>
+                        <b>{localStorage.getItem("email")}</b>
                     </div>
                     <div>
                         <button className='btn btn-danger' onClick={logout}>
