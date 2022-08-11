@@ -21,21 +21,17 @@
     margin-right: 1.5rem;
     font-size: 1.5rem;
     color: #ffffff;
-    animation: ease-in 2s;
     cursor: pointer;
-
+    transition-duration: .5s;
+    filter: brightness(0.8);
 }
 
 .list-navbar > h3:hover{
     margin-right: 1.5rem;
     font-size: 1.5rem;
-    color: #f6ff77;
-    border-bottom: 1px solid yellow;
-    animation-name: appear;
-    animation-duration: 1s;
-
+    filter: brightness(2.5);
+    transform: scale(0.9,0.9);
     
-
 }
 
 

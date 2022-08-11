@@ -6,10 +6,18 @@ import axios from "axios"
 import { useNavigate } from "react-router-dom"
 import { Accordion } from 'react-bootstrap'
 import { addToCart } from '../store/slices/cart.slices'
+import car from '../assests/images/shopping-cart-add-free-icon-font.png'
+import car2 from '../assests/images/shopping-cart-check-free-icon-font.png'
+import love from '../assests/images/heart-free-icon-font.png'
+
 
 const baseUrl = "https://ecommerce-api-react.herokuapp.com/api/v1"
 
 const Home = () => {
+
+
+  const [isAdded, setIsAdded] = useState(car)
+
   const [search, setSearch] = useState("")
 
   const products = useSelector((state) => state.products)
@@ -48,6 +56,18 @@ const Home = () => {
     }
     dispatch(addToCart(productToAdd))
   }
+  const add = () => {
+    setIsAdded(car2)
+  }
+
+  const oldValue = (maxValue) =>{
+    parseInt(maxValue,10)
+    return Math.floor( Math.random()*5)
+  }
+  console.log(products)
+
+
+  
 
   return (
     <div>
@@ -97,7 +117,7 @@ const Home = () => {
 
           <div className="cards-container">
             {products.map((product) => (
-              <li key={product.id} className="product-wrapper">
+              <li key={product.id} className="product-wrapper" onClick={() => goDetail(product.id)}>
                 <div className="product-container">
                   <div
                     className="product-image"
@@ -106,16 +126,25 @@ const Home = () => {
                   </div>
 
                   <div className="product-info">
+                    <h4 className="label">Free shipping</h4>
                     <h3>{product.title}</h3>
                     <div>
                       Price:
-                      <p>
-                        <b>$ {product.price}</b>
-                      </p>
+                      <div className="prices">
+                        <h6 className="old-price">$ {product.price.replace("0",oldValue(product.price)) }</h6>
+                        <h5 className="w">$ {product.price}</h5>
+                      </div>
                     </div>
                     <div className="btn-section">
                       <button className="btn-buy" onClick={() => addCart(product.id)}>Buy</button>
-                      <button className="btn-details" onClick={() => goDetail(product.id)}>Details</button>
+                    </div>
+                    <div className="row-section">
+                      <div className="circle"></div>
+                      <h4 className="label-stok">{product.id}+ pcs. in stock</h4>
+                    </div>
+                    <div className="btn-row">
+                    <button className="btn-addcar" onClick={()=>console.log("add")} > <img src={isAdded} className='icon' /> add to cart</button>
+                    <button className="btn-list" onClick={() => addCart(product.id)}><img src={love} className='icon' /> Buy</button>
                     </div>
                   </div>
                 </div>

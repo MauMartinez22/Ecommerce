@@ -6,13 +6,16 @@ import Navbar from './componentes/Navbar'
 import ProtectedRoutes from './componentes/ProtectedRoutes';
 import Loader from './componentes/Loader';
 import Footer from './componentes/Footer';
- 
+import banenr from './assests/images/banner.png'
 
 
 function App() {
   const isLoading = useSelector(state => state.isLoading)
   
   return (
+    <div className='working'>
+      {/*
+        <h1> They are improving me to offer a better service</h1>
     <HashRouter>
       <Navbar />
       <div className='App'>
@@ -29,7 +32,8 @@ function App() {
         </Routes>
       </div>
       <Footer/>
-    </HashRouter>
+  </HashRouter>*/}
+    </div>
   );
 }
 

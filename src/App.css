@@ -16,3 +16,11 @@
 body{
   background: whitesmoke;
 }
+
+.working{
+  background-image: url('../src/assests/images/banner.png');
+  background-size: cover;
+  background-position: initial;
+  height: 90vh;
+  width: 90vw;
+}

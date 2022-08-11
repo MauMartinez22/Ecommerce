@@ -17,8 +17,10 @@ const Login = () => {
         .then(res=>{
             localStorage.setItem('token',res.data.data.token);
             localStorage.setItem('userName',res.data.data.user.firstName +" "+ res.data.data.user.lastName)
+            
             navigate('/user');
             alert("Welcome back");
+            console.log(res.data)
         })
         .catch(error=>{
             if(error.response.status===404){
